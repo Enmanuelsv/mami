@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Te amo mami</title>
+    <style>
+        body {
+            background-color: #ffe6e6;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .love-container {
+            text-align: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 60px;
+            color: #ff4d4d;
+            text-shadow: 2px 2px 10px rgba(255, 0, 0, 0.5);
+            font-family: 'Cursive', sans-serif;
+            margin: 0;
+            opacity: 0;
+            animation: fadeInText 10s forwards;
+        } 
+
+        @keyframes fadeInText {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+ 
+        
+    </style>
+</head>
+<body>
+    <div class="love-container">
+        <h1 id="loveText">Te amo mami</h1>
+        <div class="heart"></div>
+        <div class="heart-small left"></div>
+        <div class="heart-small right"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const text = document.getElementById('loveText');
+            setTimeout(() => {
+                text.classList.add('completed');
+            }, 3000); // Se añade la clase para hacer aparecer el corazón tras 3 segundos
+        });
+    </script>
+</body>
+</html>
